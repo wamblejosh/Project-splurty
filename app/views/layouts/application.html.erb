@@ -37,45 +37,30 @@
     
        
        <!-- Modal -->
-       <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-       aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
          <div class="modal-dialog" role="document">
            <div class="modal-content">
              <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">x</span>
+                 <span aria-hidden="true">×</span>
                </button>
                <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
+            </div>
+            <%= simple_form_for Quote.new do |f| %>
+              <div class="modal-body">
+                <%= f.input :saying, label: "Enter what ever you wish", placeholder: "This could be a promising new addition to the collection." %>
+                <br />
+                <%= f.input :author, label: "Who wrote this peice?", placeholder: "Solo... Han that is" %>
              </div>
-                 <%= simple_form_for Quote.new do |f| %>
-                 <div class="modal-body">
-                   <%= f.input :saying, label: "Enter your quote at your leisure" %>
-                   <%= f.input :author, label: "Who has written this?" %>
-                 </div>
-                  <div class="modal-footer">
-                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                   <%= f.submit 'Create', class: 'btn btn-danger' %>
-                 </div>
-                 <% end %>
-
-             <div class="modal-body">
-               <%= simple_form_for Quote.new do |f| %>
-               <%= f.input :saying, label: "Enter your quote at your leisure" %>
-               <br />
-               <%= f.input :author, label: "Who has written this?" %>
-               <br />
-               <%= f.submit 'Create', class: 'btn btn-danger' %>
-
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <%= f.submit 'Create', class: 'btn btn-danger' %>
+               </div>
                <% end %>
-             </div>
-             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary"
-               data-dismiss="modal">Close</button>
-               <button type="button" class="btn btn-primary">Save changes</button>
-             </div>
-          </div>
-        </div>
-      </div>        
+    </div>
+  </div>
+</div>
+                    
 
 
     <hr />
