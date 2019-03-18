@@ -103,3 +103,25 @@ h2 {
 .about {
   font-family: 'kaushan_scriptregular';
 }
+
+@media (max-width: 750px) {
+  .footer-blurb {
+    text-align: left;
+  }
+}
+
+.modal {
+  font-family: 'kaushan_scriptregular'
+}
+
+h2 span {
+  color: #dddddd;
+  font-family: 'kaushan_scriptregular';
+  font-weight: bold;
+  font-size: 48px;
+  
+}
+
+::selection {
+  background-color: #f84342;
+}
